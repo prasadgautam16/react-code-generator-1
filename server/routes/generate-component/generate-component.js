@@ -18,7 +18,7 @@ router.post("/", (req, res) => {
 		const generatedComponent = [];
 		req.body.forEach((element) => {
 			const componentName = pascalCase(element.name);
-			const componentPath = GENERATED_PATH + componentName + "/";
+			const componentPath = GENERATED_PATH + "/";
 
 			if (!fs.existsSync(componentPath)) {
 				fs.mkdirSync(componentPath, { recursive: true });
